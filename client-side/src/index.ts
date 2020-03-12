@@ -1,2 +1,2 @@
 let num: number = 123
-document.title = 'chimp'
+document.title = 'chimp i'
