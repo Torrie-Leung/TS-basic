@@ -37,3 +37,6 @@ console.log(Object.getOwnPropertyNames(info1))
 console.log(Object.getOwnPropertySymbols(info1))
 // Reflect will return all types of attributes' name in an objec
 console.log(Reflect.ownKeys(info1))
+
+const s9 = Symbol.for('newt')
+console.log(Symbol.keyFor(s9))
