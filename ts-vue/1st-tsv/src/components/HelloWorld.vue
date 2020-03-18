@@ -1,7 +1,10 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>{{chimp}}</p>
+    <p>{{aloha}}</p>
+    <p>{{fullName}}</p>
+    <h4>{{counter}}</h4>
+    <button @click="incCounter">PressMe</button>
   </div>
 </template>
 
@@ -11,7 +14,19 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 @Component
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
-  chimp = 'hey dummies'
+  aloha = 'hey dummies'
+  fisrtName = 'Torrie'
+  lastName = 'Leung'
+  counter = 0
+  mounted(){
+    console.log('mounted')
+  }
+  get fullName(): string{
+    return this.fisrtName + ' ' + this.lastName
+  }
+  incCounter(){
+    this.counter++
+  }
 }
 </script>
 
